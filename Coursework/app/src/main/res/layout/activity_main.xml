@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2F394D"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="126dp"
+        android:layout_height="197dp"
+        android:layout_marginLeft="154dp"
+        android:layout_marginTop="80dp"
+        app:srcCompat="@drawable/Logo"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="195dp"
+        android:layout_height="130dp"
+        android:layout_below="@+id/imageView"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_marginStart="-39dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="-178dp"
+        android:fontFamily="@font/indie_flower"
+        android:text="Let's test your IQ"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#0081A7"
+        android:textSize="41dp"
+        android:textStyle="italic" />
+
+    <Button
+        android:id="@+id/test"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_alignStart="@+id/textView"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="242dp"
+        android:background="@drawable/button_default"
+        android:text="Test" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_alignEnd="@+id/imageView"
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_marginStart="-133dp"
+        android:layout_marginEnd="185dp"
+        android:layout_marginBottom="119dp"
+        app:srcCompat="@drawable/question_mark_PNG2" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_alignEnd="@+id/imageView"
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_marginStart="187dp"
+        android:layout_marginTop="324dp"
+        android:layout_marginEnd="-130dp"
+        android:layout_marginBottom="-196dp"
+        app:srcCompat="@drawable/question_mark_PNG4" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="63dp"
+        android:layout_height="70dp"
+        android:layout_alignStart="@+id/textView"
+        android:layout_alignTop="@+id/textView"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_marginStart="-89dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="220dp"
+        android:layout_marginBottom="-35dp"
+        app:srcCompat="@drawable/question_mark_PNG7" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="67dp"
+        android:layout_height="71dp"
+        android:layout_alignStart="@+id/textView"
+        android:layout_alignTop="@+id/textView"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_marginStart="-6dp"
+        android:layout_marginTop="299dp"
+        android:layout_marginEnd="135dp"
+        android:layout_marginBottom="-240dp"
+        app:srcCompat="@drawable/question_mark_PNG1" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView"
+        android:layout_alignTop="@+id/textView"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_marginStart="184dp"
+        android:layout_marginTop="-109dp"
+        android:layout_marginEnd="-88dp"
+        android:layout_marginBottom="144dp"
+        app:srcCompat="@drawable/question_mark_PNG26" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_alignEnd="@+id/imageView"
+        android:layout_marginTop="122dp"
+        android:layout_marginEnd="143dp"
+        app:srcCompat="@drawable/question_mark_PNG124" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_alignEnd="@+id/imageView"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="-73dp"
+        android:layout_marginEnd="-121dp"
+        app:srcCompat="@drawable/question_mark_PNG21" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="87dp"
+        android:layout_height="85dp"
+        android:layout_alignStart="@+id/textView"
+        android:layout_alignTop="@+id/textView"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_marginStart="182dp"
+        android:layout_marginTop="283dp"
+        android:layout_marginEnd="-73dp"
+        android:layout_marginBottom="-239dp"
+        app:srcCompat="@drawable/question_mark_PNG27" />
+
+</RelativeLayout>
