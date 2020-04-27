@@ -10,25 +10,25 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="183dp"
-        android:layout_height="174dp"
-        android:layout_marginLeft="110dp"
-        android:layout_marginTop="50dp"
+        android:layout_width="183sp"
+        android:layout_height="174sp"
+        android:layout_marginLeft="110sp"
+        android:layout_marginTop="50sp"
         app:srcCompat="@drawable/logo" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="206dp"
-        android:layout_height="179dp"
+        android:layout_width="206sp"
+        android:layout_height="179sp"
         android:layout_alignStart="@+id/imageView"
         android:layout_alignTop="@+id/imageView"
         android:layout_alignEnd="@+id/imageView"
         android:layout_alignBottom="@+id/imageView"
         android:layout_marginStart="-6dp"
-        android:layout_marginLeft="100px"
-        android:layout_marginTop="203dp"
+        android:layout_marginLeft="100sp"
+        android:layout_marginTop="203sp"
         android:layout_marginEnd="-17dp"
-        android:layout_marginBottom="-208dp"
+        android:layout_marginBottom="-208sp"
         android:fontFamily="@font/indie_flower"
         android:text="Let's test your IQ"
         android:textAlignment="center"
@@ -39,16 +39,16 @@
 
     <Button
         android:id="@+id/test"
-        android:layout_width="117dp"
-        android:layout_height="44dp"
+        android:layout_width="117sp"
+        android:layout_height="44sp"
         android:layout_alignStart="@+id/textView"
         android:layout_alignTop="@+id/textView"
         android:layout_alignEnd="@+id/textView"
         android:layout_alignBottom="@+id/textView"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="258dp"
-        android:layout_marginEnd="51dp"
-        android:layout_marginBottom="-124dp"
+        android:layout_marginStart="36sp"
+        android:layout_marginTop="258sp"
+        android:layout_marginEnd="51sp"
+        android:layout_marginBottom="-124sp"
         android:background="@drawable/button_default"
         android:fontFamily="@font/chelsea_market"
         android:text="Test"
@@ -92,21 +92,21 @@
         android:layout_marginStart="-89sp"
         android:layout_marginTop="96sp"
         android:layout_marginEnd="220sp"
-        android:layout_marginBottom="-35dp"
+        android:layout_marginBottom="-35sp"
         app:srcCompat="@drawable/question7" />
 
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="67sp"
-        android:layout_height="71dp"
+        android:layout_height="71sp"
         android:layout_alignStart="@+id/textView"
         android:layout_alignTop="@+id/textView"
         android:layout_alignEnd="@+id/textView"
         android:layout_alignBottom="@+id/textView"
-        android:layout_marginStart="-51dp"
-        android:layout_marginTop="268dp"
-        android:layout_marginEnd="184dp"
-        android:layout_marginBottom="-205dp"
+        android:layout_marginStart="-51sp"
+        android:layout_marginTop="268sp"
+        android:layout_marginEnd="184sp"
+        android:layout_marginBottom="-205sp"
         app:srcCompat="@drawable/question1" />
 
     <ImageView
@@ -117,10 +117,10 @@
         android:layout_alignTop="@+id/textView"
         android:layout_alignEnd="@+id/textView"
         android:layout_alignBottom="@+id/textView"
-        android:layout_marginStart="184dp"
-        android:layout_marginTop="-109dp"
-        android:layout_marginEnd="-88dp"
-        android:layout_marginBottom="144dp"
+        android:layout_marginStart="184sp"
+        android:layout_marginTop="-109sp"
+        android:layout_marginEnd="-88sp"
+        android:layout_marginBottom="144sp"
         app:srcCompat="@drawable/question26" />
 
     <ImageView
@@ -129,8 +129,8 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/imageView"
         android:layout_alignEnd="@+id/imageView"
-        android:layout_marginTop="136dp"
-        android:layout_marginEnd="218dp"
+        android:layout_marginTop="136sp"
+        android:layout_marginEnd="218sp"
         app:srcCompat="@drawable/question124" />
 
     <ImageView
@@ -140,23 +140,23 @@
         android:layout_alignStart="@+id/imageView"
         android:layout_alignTop="@+id/imageView"
         android:layout_alignEnd="@+id/imageView"
-        android:layout_marginStart="163dp"
-        android:layout_marginTop="-16dp"
-        android:layout_marginEnd="-123dp"
+        android:layout_marginStart="163sp"
+        android:layout_marginTop="-16sp"
+        android:layout_marginEnd="-123sp"
         app:srcCompat="@drawable/question21" />
 
     <ImageView
         android:id="@+id/imageView8"
-        android:layout_width="87dp"
-        android:layout_height="85dp"
+        android:layout_width="87sp"
+        android:layout_height="85sp"
         android:layout_alignStart="@+id/textView"
         android:layout_alignTop="@+id/textView"
         android:layout_alignEnd="@+id/textView"
         android:layout_alignBottom="@+id/textView"
-        android:layout_marginStart="175dp"
-        android:layout_marginTop="266dp"
-        android:layout_marginEnd="-63dp"
-        android:layout_marginBottom="-219dp"
+        android:layout_marginStart="175sp"
+        android:layout_marginTop="266sp"
+        android:layout_marginEnd="-63sp"
+        android:layout_marginBottom="-219sp"
         app:srcCompat="@drawable/question27" />
 
 </RelativeLayout>
