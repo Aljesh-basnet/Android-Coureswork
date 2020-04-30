@@ -1,50 +1,81 @@
 package com.example.coursework;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class Login extends AppCompatActivity {
-    private EditText input_userName, input_password;
-    private Button btn,btn1;
+    private EditText input_email, input_password;
+    private Button login_btn, createAccount_btn;
+    private FirebaseAuth mAuth;
+    ProgressBar progress;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        input_userName=findViewById(R.id.login_username);
+        input_email=findViewById(R.id.login_username);
         input_password=findViewById(R.id.login_password);
-        btn=findViewById(R.id.login);
+        login_btn=findViewById(R.id.login);
+        mAuth = FirebaseAuth.getInstance();
+        progress=findViewById(R.id.progressBar2);
+        createAccount_btn=findViewById(R.id.login_createAccount);
 
-        btn1=findViewById(R.id.createAccount);
 
-        btn.setOnClickListener(new View.OnClickListener() {
+
+        login_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String username= input_userName.getText().toString();
-                String password= input_password.getText().toString();
-                if (username.isEmpty()) {
-                    Toast.makeText(Login.this, "UserName is empty", Toast.LENGTH_SHORT).show();
+                String email= input_email.getText().toString().trim();
+                String password =input_password.getText().toString().trim();
 
-                } else if (password.isEmpty()) {
-                    Toast.makeText(Login.this, "Password is empty", Toast.LENGTH_LONG).show();
-                } else if (username.equals("admin") && password.equals("root")) {
-                    startActivity(new Intent(Login.this, MainActivity.class));
-                } else {
-                    Toast.makeText(Login.this, "Invalid Username or Password", Toast.LENGTH_SHORT).show();
+                if (TextUtils.isEmpty(email)){
+                    input_email.setError("Email field is empty");
+                    return;
                 }
+                if(TextUtils.isEmpty(password)){
+                    input_password.setError("Password field is empty");
+                    return;
+                }
+
+                progress.setVisibility(View.VISIBLE);
+
+                mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful()){
+                            Toast.makeText(Login.this,"Login success",Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getApplicationContext(), Home.class));
+
+                        }
+                        else{
+                            Toast.makeText(Login.this,"Error ! "+ task.getException().getMessage() ,Toast.LENGTH_SHORT).show();
+                            progress.setVisibility(View.GONE);
+                        }
+
+                    }
+                });
             }
         });
-        btn1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent startIntent= new Intent(getApplicationContext(), Signup.class);
-                startActivity(startIntent);
-            }
-        });
+
+    }
+    public void CreateAccount(View view){
+        Intent StartIntent= new Intent(getApplicationContext(),Signup.class);
+        startActivity(StartIntent);
     }
 }
+

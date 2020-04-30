@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "149559166275",
+    "firebase_url": "https://coursework-b9bca.firebaseio.com",
+    "project_id": "coursework-b9bca",
+    "storage_bucket": "coursework-b9bca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:149559166275:android:e9c3fe44407e8807c3dbf6",
+        "android_client_info": {
+          "package_name": "com.example.coursework"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "149559166275-cviqhs5fjbdhq70tsm9579n4cba8palo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4-Ma2YoN_MrEoyWvJep-csoK84DRamvQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "149559166275-cviqhs5fjbdhq70tsm9579n4cba8palo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
