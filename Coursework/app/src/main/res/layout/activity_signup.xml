@@ -17,13 +17,13 @@
 
     <EditText
         android:id="@+id/signup_username"
-        android:layout_width="300dp"
+        android:layout_width="342dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView11"
         android:layout_alignStart="@+id/imageView11"
         android:layout_alignEnd="@+id/imageView11"
         android:layout_alignBottom="@+id/imageView11"
-        android:layout_marginStart="-89dp"
+        android:layout_marginStart="-76dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="-84dp"
         android:layout_marginBottom="-55dp"
@@ -115,8 +115,8 @@
 
     <ImageView
         android:id="@+id/confirm_password_icon"
-        android:layout_width="27dp"
-        android:layout_height="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
         android:layout_alignStart="@+id/signup_password"
         android:layout_alignTop="@+id/password"
         android:layout_alignEnd="@+id/password"
@@ -129,15 +129,15 @@
 
     <ImageView
         android:id="@+id/password_icon"
-        android:layout_width="30dp"
-        android:layout_height="31dp"
+        android:layout_width="15dp"
+        android:layout_height="wrap_content"
         android:layout_alignStart="@+id/signup_confirmPassword"
         android:layout_alignTop="@+id/password"
         android:layout_alignEnd="@+id/signup_confirmPassword"
         android:layout_alignBottom="@+id/signup_confirmPassword"
         android:layout_marginStart="-24dp"
         android:layout_marginTop="11dp"
-        android:layout_marginEnd="346dp"
+        android:layout_marginEnd="348dp"
         android:layout_marginBottom="10dp"
         app:srcCompat="@drawable/ic_no_encryption_24px" />
 

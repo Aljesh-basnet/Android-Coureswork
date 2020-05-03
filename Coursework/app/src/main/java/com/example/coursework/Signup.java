@@ -77,7 +77,7 @@ public class Signup extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             Toast.makeText(Signup.this,"User created",Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                            startActivity(new Intent(getApplicationContext(), Login.class));
                         }
                         else{
                             Toast.makeText(Signup.this, "Error " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
@@ -92,7 +92,7 @@ public class Signup extends AppCompatActivity {
         });
     }
     public void Login(View view){
-        Intent startIntent = new Intent(getApplicationContext(),Login.class);
+        Intent startIntent = new Intent(Signup.this,Login.class);
         startActivity(startIntent);
     }
 
