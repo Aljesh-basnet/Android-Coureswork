@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2F394D"
+    tools:context=".CategoriesActivity"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#7180AC"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+<!--        <Button-->
+<!--        android:id="@+id/logout"-->
+<!--        android:layout_width="117sp"-->
+<!--        android:layout_height="44sp"-->
+<!--        android:layout_alignStart="@+id/textView"-->
+<!--        android:layout_alignTop="@+id/textView"-->
+<!--        android:layout_alignEnd="@+id/textView"-->
+<!--        android:layout_alignBottom="@+id/textView"-->
+<!--        android:layout_marginStart="49dp"-->
+<!--        android:layout_marginTop="283dp"-->
+<!--        android:layout_marginEnd="38dp"-->
+<!--        android:layout_marginBottom="-149dp"-->
+<!--        android:background="@drawable/button_default"-->
+<!--        android:fontFamily="@font/chelsea_market"-->
+<!--        android:text="Logout"-->
+<!--        android:textSize="18sp"-->
+<!--        android:typeface="normal" />-->
+
+
+</LinearLayout>

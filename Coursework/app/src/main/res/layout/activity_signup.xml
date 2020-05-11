@@ -157,6 +157,7 @@
     <Button
         android:id="@+id/signup_createAccount"
         android:layout_width="wrap_content"
+        android:stateListAnimator="@null"
         android:layout_height="38dp"
         android:layout_alignStart="@+id/imageView11"
         android:layout_alignTop="@+id/imageView11"
@@ -173,6 +174,7 @@
 
     <Button
         android:id="@+id/signup_login"
+        android:stateListAnimator="@null"
         android:layout_width="129dp"
         android:layout_height="39dp"
         android:layout_alignStart="@+id/imageView11"
