@@ -1,5 +1,6 @@
 package com.example.coursework;
 
+import android.content.Intent;
 import android.nfc.TagLostException;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -53,9 +54,17 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Viewho
             title = itemView.findViewById(R.id.title);
 
         }
-        private void setData(String url, String title){
+        private void setData(String url, final String title){
            Glide.with(itemView.getContext()).load(url).into(imageView); //using glide to parse image
             this.title.setText(title);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent setIntent = new Intent(itemView.getContext(), SetsActivity.class);
+                    setIntent.putExtra("title", title);
+                    itemView.getContext().startActivity(setIntent);
+                }
+            });
         }
     }
 }

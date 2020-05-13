@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuestionsActivity"
+    android:background="#2F394D">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#7180AC"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="163dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="18dp"
+        android:text="@string/app_name"
+        android:textColor="#EEE1B3"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/linearlayout_1"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="528dp"
+        android:background="#7180AC"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/button_uncolored"
+            android:padding="16dp"
+            android:textSize="18dp"
+            android:text="TextView"
+            android:textColor="#EEE1B3" />
+
+        <TextView
+            android:id="@+id/no_index"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="TextView"
+            android:textStyle="bold"
+            android:textColor="#EEE1B3"
+            android:textSize="16dp"
+
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/option_box"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="190dp"
+        android:layout_marginEnd="0dp"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stateListAnimator="@null"
+            android:layout_margin="8dp"
+            android:textColor="#EEE1B3"
+            android:background="@drawable/button_uncolored"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/button_uncolored"
+            android:stateListAnimator="@null"
+            android:text="Button"
+            android:textColor="#EEE1B3" />
+
+        <Button
+            android:id="@+id/button3"
+            android:stateListAnimator="@null"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textColor="#EEE1B3"
+            android:background="@drawable/button_uncolored"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/button4"
+            android:stateListAnimator="@null"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textColor="#EEE1B3"
+            android:background="@drawable/button_uncolored"
+            android:text="Button" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/next_btn"
+        android:stateListAnimator="@null"
+        android:background="@drawable/button_uncolored"
+        android:backgroundTint="#F07167"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/option_box"
+        android:layout_alignBottom="@+id/option_box"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="163dp"
+        android:layout_marginTop="331dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginBottom="-91dp"
+        android:text="Next"
+        />
+</RelativeLayout>
