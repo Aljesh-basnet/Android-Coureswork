@@ -1,5 +1,6 @@
 package com.example.coursework;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,7 +32,7 @@ private  int sets =0;
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int position, View convertView, final ViewGroup parent) {
         View view;
 
 
@@ -41,9 +42,17 @@ private  int sets =0;
         else {
             view=convertView;
         }
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent questionIntent = new Intent(parent.getContext(),QuestionsActivity.class);//for generating questions
+                parent.getContext().startActivity(questionIntent);
 
+            }
+        });
 
-        ((TextView) view.findViewById(R.id.set_textview)).setText(String.valueOf(position+1)); //position starts with 0 but sets starts with 1
+        ((TextView) view.findViewById(R.id.set_textview)).setText(String.valueOf(position+1)); //casting view to textView
+        //position starts with 0 but sets starts with 1
         return view;
     }
 }
