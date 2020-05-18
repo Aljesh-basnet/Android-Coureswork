@@ -25,6 +25,7 @@ public class CategoriesActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef = database.getReference();
+    private List <CategoryModel> list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,27 +42,25 @@ public class CategoriesActivity extends AppCompatActivity {
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(layoutManager);
 
-        List <CategoryModel> list = new ArrayList<>();
-        list.add(new CategoryModel("","Category1"));
-        list.add(new CategoryModel("","Category1"));
-        list.add(new CategoryModel("","Category1"));
-        list.add(new CategoryModel("","Category1"));
+        list = new ArrayList<>();
 
-        CategoryAdapter adapter = new CategoryAdapter(list);
+
+        final CategoryAdapter adapter = new CategoryAdapter(list);
         recyclerView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
 
-        myRef.child("Categories").child("category1").child("name").addListenerForSingleValueEvent(new ValueEventListener() {
+        myRef.child("Categories").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-
-                Toast.makeText(CategoriesActivity.this, dataSnapshot.getValue().toString(), Toast.LENGTH_SHORT).show();
-                dataSnapshot.getValue();
+                for (DataSnapshot data: dataSnapshot.getChildren()){
+                    list.add(data.getValue(CategoryModel.class));
+                }
+                adapter.notifyDataSetChanged();//refreshing adapter
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-
+                Toast.makeText(CategoriesActivity.this, databaseError.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
 

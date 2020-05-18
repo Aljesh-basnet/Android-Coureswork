@@ -1,26 +1,42 @@
 package com.example.coursework;
 
 public class CategoryModel {
-    private String imageUrl, title;
+    private String name;
+    private int sets;
+    private String url;
 
-    public CategoryModel(String imageUrl, String title) {
-        this.imageUrl = imageUrl;
-        this.title = title;
+    public CategoryModel() {
+        //for firebase
+
     }
 
-    public String getImageUrl() {
-        return imageUrl;
+    public CategoryModel(String name, int sets, String url) {
+        this.name = name;
+        this.sets = sets;
+        this.url = url;
     }
 
-    public String getTitle() {
-        return title;
+    public String getName() {
+        return name;
     }
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public int getSets() {
+        return sets;
+    }
+
+    public void setSets(int sets) {
+        this.sets = sets;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 }
