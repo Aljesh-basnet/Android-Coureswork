@@ -32,22 +32,19 @@ public class CategoriesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_categories);
         Toolbar toolbar = findViewById(R.id.toolbar);
+        list = new ArrayList<>();
 
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Categories");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);//code for action bar
 
         recyclerView =findViewById(R.id.rv);
         LinearLayoutManager layoutManager=new LinearLayoutManager(this);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(layoutManager);
-
-        list = new ArrayList<>();
-
-
         final CategoryAdapter adapter = new CategoryAdapter(list);
         recyclerView.setAdapter(adapter);
-        adapter.notifyDataSetChanged();
+        adapter.notifyDataSetChanged();//code for mappping recycler view with adapter
 
         myRef.child("Categories").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override

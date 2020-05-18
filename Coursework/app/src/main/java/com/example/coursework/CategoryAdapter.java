@@ -34,10 +34,10 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Viewho
 
     @Override
     public void onBindViewHolder(@NonNull Viewholder holder, int position) {
-            String img= categoryModelList.get(position).getUrl();
+//            String img= categoryModelList.get(position).getUrl();
             String title=categoryModelList.get(position).getName();
-
-            holder.setData(img ,title);
+//        holder.setData(img ,title);
+            holder.setData(title);
     }
 
     @Override
@@ -46,16 +46,16 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Viewho
     }
 
     public class Viewholder extends RecyclerView.ViewHolder {
-        private CircleImageView imageView;
+
         private TextView title;
         public Viewholder(@NonNull View itemView) {
             super(itemView);
-            imageView = itemView.findViewById(R.id.image_view);
+
             title = itemView.findViewById(R.id.title);
 
         }
-        private void setData(String url, final String title){
-           Glide.with(itemView.getContext()).load(url).into(imageView); //using glide to parse image
+        private void setData(final String title){
+
             this.title.setText(title);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

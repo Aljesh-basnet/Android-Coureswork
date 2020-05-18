@@ -12,12 +12,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/image_view"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        app:civ_border_width="10dp"
-        android:background="#F07167" />
+<!--    <de.hdodenhof.circleimageview.CircleImageView-->
+<!--        android:id="@+id/image_view"-->
+<!--        android:layout_width="70dp"-->
+<!--        android:layout_height="70dp"-->
+<!--        app:civ_border_width="10dp"-->
+<!--        android:background="#F07167" />-->
 
     <TextView
         android:id="@+id/title"
@@ -30,8 +30,8 @@
         android:gravity="center_vertical"
         android:padding="8dp"
         android:text="Title"
-        android:textColor="@android:color/secondary_text_light"
-        android:textSize="18sp"
+        android:textColor="#F07167"
+        android:textSize="22sp"
 
         />
 

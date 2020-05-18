@@ -3,17 +3,17 @@ package com.example.coursework;
 public class CategoryModel {
     private String name;
     private int sets;
-    private String url;
+
 
     public CategoryModel() {
         //for firebase
 
     }
 
-    public CategoryModel(String name, int sets, String url) {
+    public CategoryModel(String name, int sets) {
         this.name = name;
         this.sets = sets;
-        this.url = url;
+
     }
 
     public String getName() {
@@ -32,11 +32,4 @@ public class CategoryModel {
         this.sets = sets;
     }
 
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
 }
