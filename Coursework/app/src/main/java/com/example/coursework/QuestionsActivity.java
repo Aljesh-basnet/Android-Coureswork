@@ -30,7 +30,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class QuestionsActivity extends AppCompatActivity {
-    private TextView question,noIndex;
+    private TextView question;
     private LinearLayout optionsBox;
     private Button nextButton;
     private int count=0;
@@ -50,7 +50,7 @@ public class QuestionsActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         question=findViewById(R.id.question);
-        noIndex= findViewById(R.id.no_index);
+        TextView noIndex = findViewById(R.id.no_index);
         optionsBox=findViewById(R.id.option_box);
         nextButton=findViewById(R.id.next_btn);
 

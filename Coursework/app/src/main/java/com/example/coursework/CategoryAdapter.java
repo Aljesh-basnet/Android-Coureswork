@@ -28,7 +28,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Viewho
     public Viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.category_item,parent, false);
-        return new Viewholder(view);
+        return new Viewholder(view);//1st step
 
     }
 
@@ -46,7 +46,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Viewho
         return categoryModelList.size();
     }
 
-    public class Viewholder extends RecyclerView.ViewHolder {
+    public class Viewholder extends RecyclerView.ViewHolder {//2nd step
 
         private TextView title;
         public Viewholder(@NonNull View itemView) {
