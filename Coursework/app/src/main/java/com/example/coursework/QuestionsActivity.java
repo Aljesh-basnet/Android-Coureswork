@@ -51,7 +51,7 @@ public class QuestionsActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         question=findViewById(R.id.question);
-        TextView noIndex = findViewById(R.id.no_index);
+//        TextView noIndex = findViewById(R.id.no_index);
         optionsBox=findViewById(R.id.option_box);
         nextButton=findViewById(R.id.next_btn);
 
