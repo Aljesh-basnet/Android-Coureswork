@@ -34,10 +34,11 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Viewho
 
     @Override
     public void onBindViewHolder(@NonNull Viewholder holder, int position) {
-//            String img= categoryModelList.get(position).getUrl();
-            String title=categoryModelList.get(position).getName();
-//        holder.setData(img ,title);
-            holder.setData(title);
+
+            String title=categoryModelList.get(position).getName();//getting name and sets from modelclass object
+            int sets=categoryModelList.get(position).getSets();
+
+            holder.setData(title,sets);//start new activity
     }
 
     @Override
@@ -51,10 +52,10 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Viewho
         public Viewholder(@NonNull View itemView) {
             super(itemView);
 
-            title = itemView.findViewById(R.id.title);
+            title = itemView.findViewById(R.id.title); //mapping category_item text view to title
 
         }
-        private void setData(final String title){
+        private void setData(final String title, final int sets){
 
             this.title.setText(title);
             itemView.setOnClickListener(new View.OnClickListener() {
@@ -62,6 +63,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Viewho
                 public void onClick(View v) {
                     Intent setIntent = new Intent(itemView.getContext(), SetsActivity.class);
                     setIntent.putExtra("title", title);
+                    setIntent.putExtra("sets", sets);
                     itemView.getContext().startActivity(setIntent);
                 }
             });

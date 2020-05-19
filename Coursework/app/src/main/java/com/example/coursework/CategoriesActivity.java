@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CategoriesActivity extends AppCompatActivity {
-    Button logout_btn;
+
     private RecyclerView recyclerView;
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef = database.getReference();
@@ -36,7 +36,7 @@ public class CategoriesActivity extends AppCompatActivity {
 
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Categories");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);//code for action bar
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);//code for toolbar
 
         recyclerView =findViewById(R.id.rv);
         LinearLayoutManager layoutManager=new LinearLayoutManager(this);

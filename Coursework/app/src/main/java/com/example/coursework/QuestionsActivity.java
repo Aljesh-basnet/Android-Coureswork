@@ -18,6 +18,13 @@ import android.view.animation.LinearInterpolator;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,6 +37,10 @@ public class QuestionsActivity extends AppCompatActivity {
     private List<QuestionsModel> list;
     private int position=0;
     private  int score=0;
+    private String category;
+    private int sets;
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference myRef = database.getReference();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,45 +54,58 @@ public class QuestionsActivity extends AppCompatActivity {
         optionsBox=findViewById(R.id.option_box);
         nextButton=findViewById(R.id.next_btn);
 
-         list= new ArrayList<>();
-        list.add(new QuestionsModel("question1", "a","b","c","d","a"));
-        list.add(new QuestionsModel("question2", "a","b","c","d","b"));
-        list.add(new QuestionsModel("question3", "a","b","c","d","c"));
-        list.add(new QuestionsModel("question4", "a","b","c","d","d"));
-        list.add(new QuestionsModel("question5", "a","b","c","d","a"));
-        list.add(new QuestionsModel("question6", "a","b","c","d","b"));
-        list.add(new QuestionsModel("question7", "a","b","c","d","c"));
-        list.add(new QuestionsModel("question8", "a","b","c","d","d"));
-
-        for(int i=0;i<4;i++){
-            optionsBox.getChildAt(i).setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    checkAnswer((Button) v);
-                }
-            });
-        }
+        category=getIntent().getStringExtra("category");
+        sets=getIntent().getIntExtra("sets",1);
 
 
-        playAnime(question,0,list.get(position).getQuestion()); //code for first question
-
-        nextButton.setOnClickListener(new View.OnClickListener() {
+        list=new ArrayList<>();
+        myRef.child("SETS").child(category).child("questions").orderByChild("sets").equalTo(sets).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
-            public void onClick(View v) {
-                nextButton.setEnabled(false);
-                nextButton.setAlpha(0.7f);
-                position++;
-                enableOption(true);
-                if(position ==list.size())
-
-                {
-                    //score activity
-                    return;
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for (DataSnapshot dataSnapshot1: dataSnapshot.getChildren()) {
+                    list.add(dataSnapshot1.getValue(QuestionsModel.class));
                 }
-                count=0;
-                playAnime(question,0,list.get(position).getQuestion());
+                if (list.size()>0){
+
+                    for(int i=0;i<4;i++){
+                        optionsBox.getChildAt(i).setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                checkAnswer((Button) v);
+                            }
+                        });
+                    }
+                    playAnime(question,0,list.get(position).getQuestion()); //code for first question4
+                    nextButton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            nextButton.setEnabled(false);
+                            nextButton.setAlpha(0.7f);
+                            position++;
+                            enableOption(true);
+                            if(position ==list.size())
+
+                            {
+                                //score activity
+                                return;
+                            }
+                            count=0;
+                            playAnime(question,0,list.get(position).getQuestion());
+                        }
+                    });
+                }
+                else  {
+                    finish();
+                    Toast.makeText(QuestionsActivity.this, "No questions found", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Toast.makeText(QuestionsActivity.this,databaseError.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
+
 
     }
     private void playAnime(final View view, final int value, final String data){

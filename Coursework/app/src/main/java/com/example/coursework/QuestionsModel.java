@@ -2,8 +2,13 @@ package com.example.coursework;
 
 public class QuestionsModel {
     private String question, optionA,optionB,optionC, optionD, correctAns;
+    private int sets;
 
-    public QuestionsModel(String question, String optionA, String optionB, String optionC, String optionD, String correctAns) {
+    public QuestionsModel() {
+    }
+
+    public QuestionsModel(String question, String optionA, String optionB, String optionC, String optionD, String correctAns,int sets) {
+        this.sets=sets;
         this.question = question;
         this.optionA = optionA;
         this.optionB = optionB;
@@ -58,5 +63,13 @@ public class QuestionsModel {
 
     public void setOptionD(String optionD) {
         this.optionD = optionD;
+    }
+
+    public int getSets() {
+        return sets;
+    }
+
+    public void setSets(int sets) {
+        this.sets = sets;
     }
 }

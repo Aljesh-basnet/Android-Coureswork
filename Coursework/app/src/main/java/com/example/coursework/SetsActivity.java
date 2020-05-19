@@ -21,7 +21,7 @@ public class SetsActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         gridView= findViewById(R.id.grid_view);
 
-        GridAdapter adapter= new GridAdapter(16);
+        GridAdapter adapter= new GridAdapter(getIntent().getStringExtra("title"), getIntent().getIntExtra("sets",0));//displays no of sets
         gridView.setAdapter(adapter);
     }
 

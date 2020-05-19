@@ -11,8 +11,10 @@ import org.w3c.dom.Text;
 
 public class GridAdapter extends BaseAdapter {
 private  int sets =0;
-
-    public GridAdapter(int sets) {
+private String category;
+    public GridAdapter(String category,int sets)
+    {
+        this.category=category;
         this.sets = sets;
     }
 
@@ -32,7 +34,7 @@ private  int sets =0;
     }
 
     @Override
-    public View getView(int position, View convertView, final ViewGroup parent) {
+    public View getView(final int position, View convertView, final ViewGroup parent) {
         View view;
 
 
@@ -46,6 +48,8 @@ private  int sets =0;
             @Override
             public void onClick(View v) {
                 Intent questionIntent = new Intent(parent.getContext(),QuestionsActivity.class);//for generating questions
+                questionIntent.putExtra("category",category);
+                questionIntent.putExtra("sets",position+1);
                 parent.getContext().startActivity(questionIntent);
 
             }

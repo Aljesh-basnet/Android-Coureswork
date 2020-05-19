@@ -46,7 +46,7 @@ public class Login extends AppCompatActivity {
         login_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email= input_email.getText().toString().trim();
+                String email= input_email.getText().toString().trim();//trim function removes all the whitespace at the front and end of the text
                 String password =input_password.getText().toString().trim();
 
                 if (TextUtils.isEmpty(email)){
@@ -58,7 +58,8 @@ public class Login extends AppCompatActivity {
                     return;
                 }
 
-                progress.setVisibility(View.VISIBLE);
+                progress.setVisibility(View.VISIBLE);//makes progress bar visible
+
 
                 mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
