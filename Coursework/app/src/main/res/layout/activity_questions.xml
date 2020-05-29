@@ -30,11 +30,10 @@
         android:textSize="16dp"
         android:textStyle="bold" />
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/linearlayout_1"
-
         android:layout_width="match_parent"
-        android:layout_height="174dp"
+        android:layout_height="204dp"
         android:layout_below="@+id/toolbar"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
@@ -42,18 +41,18 @@
         android:layout_marginStart="0dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="0dp"
-        android:layout_marginBottom="496dp"
+        android:layout_marginBottom="466dp"
         android:background="#7180AC"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/question"
-            android:layout_width="376dp"
-            android:layout_height="96dp"
+            android:layout_width="370dp"
+            android:layout_height="125dp"
             android:layout_margin="16dp"
 
             android:background="@drawable/button_uncolored"
-            android:padding="30dp"
+            android:padding="20dp"
             android:text="TextView"
             android:textColor="#EEE1B3"
             android:textSize="18dp" />
@@ -71,7 +70,7 @@
 
 
         <!--            />-->
-    </RelativeLayout>
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/option_box"
@@ -81,8 +80,8 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="2dp"
-        android:layout_marginTop="190dp"
-        android:layout_marginEnd="0dp"
+        android:layout_marginTop="211dp"
+        android:layout_marginEnd="-1dp"
         android:orientation="vertical"
         android:padding="16dp">
 
@@ -90,11 +89,11 @@
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:stateListAnimator="@null"
             android:layout_margin="8dp"
-            android:textColor="#EEE1B3"
             android:background="@drawable/button_uncolored"
-            android:text="Button" />
+            android:stateListAnimator="@null"
+            android:text="Button"
+            android:textColor="#EEE1B3" />
 
         <Button
             android:id="@+id/button2"
@@ -108,41 +107,40 @@
 
         <Button
             android:id="@+id/button3"
-            android:stateListAnimator="@null"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:textColor="#EEE1B3"
             android:background="@drawable/button_uncolored"
-            android:text="Button" />
+            android:stateListAnimator="@null"
+            android:text="Button"
+            android:textColor="#EEE1B3" />
 
         <Button
             android:id="@+id/button4"
-            android:stateListAnimator="@null"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:textColor="#EEE1B3"
             android:background="@drawable/button_uncolored"
-            android:text="Button" />
+            android:stateListAnimator="@null"
+            android:text="Button"
+            android:textColor="#EEE1B3" />
     </LinearLayout>
 
     <Button
         android:id="@+id/next_btn"
-        android:stateListAnimator="@null"
-        android:background="@drawable/button_uncolored"
-        android:backgroundTint="#F07167"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/option_box"
         android:layout_alignBottom="@+id/option_box"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="163dp"
-        android:layout_marginTop="331dp"
-        android:layout_marginEnd="160dp"
-        android:layout_marginBottom="-91dp"
+        android:layout_marginStart="159dp"
+        android:layout_marginTop="289dp"
+        android:layout_marginEnd="164dp"
+        android:layout_marginBottom="-49dp"
+        android:background="@drawable/button_uncolored"
+        android:backgroundTint="#F07167"
         android:enabled="false"
-        android:text="Next"
-        />
+        android:stateListAnimator="@null"
+        android:text="Next" />
 </RelativeLayout>
