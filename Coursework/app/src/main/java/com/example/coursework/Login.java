@@ -42,6 +42,14 @@ public class Login extends AppCompatActivity {
         createAccount_btn=findViewById(R.id.login_createAccount);
         check= findViewById(R.id.checkbox);
 
+        createAccount_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Login.this,Signup.class);
+                startActivity(intent);
+
+            }
+        });
 
         login_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,9 +103,9 @@ public class Login extends AppCompatActivity {
         });
 
     }
-    public void CreateAccount(View view){
-        Intent StartIntent= new Intent(getApplicationContext(),Signup.class);
-        startActivity(StartIntent);
-    }
+//    public void CreateAccount(View view){
+//        Intent StartIntent= new Intent(Login.this,Signup.class);
+//        startActivity(StartIntent);
+//    }
 }
 

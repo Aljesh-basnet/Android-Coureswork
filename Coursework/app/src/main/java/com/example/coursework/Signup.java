@@ -49,6 +49,13 @@ public class Signup extends AppCompatActivity {
             startActivity(new Intent(getApplicationContext(), MainActivity.class));
             finish();
         }
+        btn_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Signup.this,Login.class);
+                startActivity(intent);
+            }
+        });
 
         btn_register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -126,9 +133,9 @@ public class Signup extends AppCompatActivity {
         });
 
     }
-    public void Login(View view){
-        Intent startIntent = new Intent(Signup.this,Login.class);
-        startActivity(startIntent);
-    }
+//    public void Login(View view){
+//        Intent startIntent = new Intent(Signup.this,Login.class);
+//        startActivity(startIntent);
+//    }
 
 }
