@@ -41,7 +41,6 @@ public class Login extends AppCompatActivity {
         progress=findViewById(R.id.progressBar2);
         createAccount_btn=findViewById(R.id.login_createAccount);
         check= findViewById(R.id.checkbox);
-
         createAccount_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -86,7 +86,7 @@
         android:layout_marginBottom="-95dp"
         android:background="@drawable/button_uncolored"
         android:fontFamily="@font/chelsea_market"
-        android:onClick="CreateAccount"
+
         android:text="Create account" />
 
     <ImageView

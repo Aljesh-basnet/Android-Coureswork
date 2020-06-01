@@ -12,11 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ScoreActivity"></activity>
-        <activity android:name=".QuestionsActivity" />
-        <activity android:name=".SetsActivity" />
-        <activity android:name=".CategoriesActivity" />
-        <activity android:name=".Signup" />
-        <activity android:name=".Login" />
+        <activity android:name=".QuestionsActivity"></activity>
+        <activity android:name=".SetsActivity"></activity>
+        <activity android:name=".CategoriesActivity"></activity>
+        <activity android:name=".Signup"></activity>
+        <activity android:name=".Login" ></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
